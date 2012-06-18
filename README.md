@@ -1,6 +1,6 @@
 # ObfuReport
 
-TODO: Write a gem description
+This gem receives a string and an array then obfuscates the string based on the array values and counts the frequency of array words that exist in the string.
 
 ## Installation
 
@@ -19,6 +19,7 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
 
 ## Contributing
 

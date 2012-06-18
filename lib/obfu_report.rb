@@ -42,3 +42,7 @@ module ObfuReport
     report(string, list)
   end
 end
+
+class Obfu_report
+  include ObfuReport
+end
