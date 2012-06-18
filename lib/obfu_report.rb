@@ -10,9 +10,16 @@ module ObfuReport
       # check that input is a string and an array
       if (string.is_a? String)&&(list.is_a? Array)
         # iterate each item in the list
+        numb = 0
+        x = ""
         list.each do |wrd|
           # look for this word in the string
-          string = string.gsub(/\b#{wrd}\b/, "*")
+          numb = wrd.length
+            numb.times do
+              x << "*"
+            end
+          string = string.gsub(/\b#{wrd}\b/, x)
+          x = ""
         end
         puts "Obfuscated: #{string}"
       else
