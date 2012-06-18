@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["thefonso@thefonso.com"]
   gem.description   = %q{gem receives a string and an array then obfuscates the string based on the array values and counts the frequency of array words in string}
   gem.summary       = %q{Obfuscation and word count gem}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/thefonso/obfu_report"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
