@@ -18,7 +18,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can test this gem from the command line by copying the following code....
+---------------------------
+require 'obfu_report'
+
+
+puts "Enter in a string of words"
+str = gets.chomp
+puts "Enter in a list of words one at a time followed by the word 'exit' on the last line"
+i = 0
+lst = []
+userword = 'word1'
+while userword != 'exit'
+  userword = gets.chomp
+  lst[i] = userword
+  i = i + 1
+  if userword == 'exit'
+    lst.pop
+  end
+end
+
+o = Obfu_report.new
+o.obfu_report(str,lst)
+----------------------------
+Save this code as a file named test.rb.
+
+Once you've installed this gem locally...from the command line type 'ruby test.rb'
+Enter in a string and a list as the programs instructions state...then type 'exit'
 
 
 ## Contributing
