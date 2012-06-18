@@ -18,8 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-You can test this gem from the command line by copying the following code....
-BEGIN CUT HERE
+You can test this gem from the command line by copying the following code:
+
+    BEGIN CUT HERE
 
     require 'obfu_report'
 
@@ -42,7 +43,7 @@ BEGIN CUT HERE
     o = Obfu_report.new
     o.obfu_report(str,lst)
     
-END CUT HERE
+    END CUT HERE
 
 Save this code as a file named test.rb.
 
