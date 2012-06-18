@@ -20,27 +20,28 @@ Or install it yourself as:
 
 You can test this gem from the command line by copying the following code....
 BEGIN CUT HERE
-require 'obfu_report'
+
+    require 'obfu_report'
 
 
-puts "Enter in a string of words"
-str = gets.chomp
-puts "Enter in a list of words one at a time followed by the word 'exit' on the last line"
-i = 0
-lst = []
-userword = 'word1'
-while userword != 'exit'
-  userword = gets.chomp
-  lst[i] = userword
-  i = i + 1
-  if userword == 'exit'
-    lst.pop
-  end
-end
+    puts "Enter in a string of words"
+    str = gets.chomp
+    puts "Enter in a list of words one at a time followed by the word 'exit' on the last line"
+    i = 0
+    lst = []
+    userword = 'word1'
+    while userword != 'exit'
+      userword = gets.chomp
+      lst[i] = userword
+      i = i + 1
+      if userword == 'exit'
+        lst.pop
+      end
+    end
 
-o = Obfu_report.new
-o.obfu_report(str,lst)
-
+    o = Obfu_report.new
+    o.obfu_report(str,lst)
+    
 END CUT HERE
 
 Save this code as a file named test.rb.
