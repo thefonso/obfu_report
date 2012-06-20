@@ -38,15 +38,13 @@ module ObfuReport
   # ==> {"big" => 2, "words" => 1}
   def report(string,list)
     if (string.is_a? String)&&(list.is_a? Array)        
-      # wcline = "Word count: "
-      line = ""
-      # return wcline
+      line = {}
       list.each do |word|
         test = string.split.count(word)
-        line << (word + " => " + test.to_s + " ")
+        line[word] = test.to_s
       end
-      string = ("Word count: " + line)
-      return string
+      # string = ("Word count: " + line)
+      return line
     else
       line = "bad input, try again. \n #{string}  #{list}"
       return line
