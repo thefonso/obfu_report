@@ -41,7 +41,12 @@ You can test this gem from the command line by copying the following code:
     end
 
     o = Obfu_report.new
-    o.obfu_report(str,lst)
+    line1 = o.original(str,lst)
+    line2 = o.obfuscate(str,lst)
+    line3 = o.report(str,lst)
+    puts line1
+    puts line2
+    puts line3
     
     END CUT HERE
 
