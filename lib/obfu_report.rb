@@ -38,10 +38,12 @@ module ObfuReport
   # ==> {"big" => 2, "words" => 1}
   def report(string,list)
     if (string.is_a? String)&&(list.is_a? Array)        
-      line = {}
+      line = Hash.new(0)
       list.each do |word|
-        test = string.split.count(word)
-        line[word] = test.to_s
+        # test = string.split.count(word)
+        test = string.downcase.scan(/\b#{word}\b/).map{|word| line[word] = string.downcase.scan(/\b#{word}\b/).size}
+        
+        # line[word] = test.to_s
       end
       # string = ("Word count: " + line)
       return line
